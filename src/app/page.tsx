@@ -1,12 +1,11 @@
-import React from "react";
+import Image from "next/image";
+import styles from "./page.module.css";
+import Button from "./components/button/page";
 
-type ButtonProps = {
-  label: string;
-  onClick: () => void;
-};
-
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
-  return <button onClick={onClick}>{label}</button>;
+export default function Home() {
+  return (
+    <div>
+      <Button label="Click me" onClick={() => console.log("Button clicked")} />
+    </div>
+  );
 }
-
-export default Button;
